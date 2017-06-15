@@ -39,5 +39,16 @@ end
 def show
   @portfolios = Portfolio.find(params[:id])
 end
+
+def destroy
+  #LOOOK FOR
+   @portfolios = Portfolio.find(params[:id])
+   #DESTROY MUAHAHHAHA 
+   @portfolios.destroy
+   #GO BACK YOU SUCK OKAY?
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'MUAHHAHA YOU DESTROYED IT' }
+    end
+end
   
 end
