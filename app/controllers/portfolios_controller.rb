@@ -35,5 +35,9 @@ def update
   end
  end
 end
+
+def show
+  @portfolios = Portfolio.find(params[:id])
+end
   
 end
