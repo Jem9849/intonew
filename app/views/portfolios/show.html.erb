@@ -1,4 +1,4 @@
-<%= image_tag @portfolios.main_image %>
+<%= image_tag @portfolios.main_image unless @portfolios.main_image.nil? %>
 
 <h1><%= @portfolios.title %></h1>
 <em><%= @portfolios.subtitle %></em>
