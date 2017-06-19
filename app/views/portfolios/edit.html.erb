@@ -1,6 +1,22 @@
-<h1>Editing Portfolio</h1>
+<h1>EDIT RAWR RAWR RWAR RWAR RWAR RWAR PORTFOLIO ITEMS</h1>
 
-<%= render 'form', portfolio: @portfolio %>
+<%= form_for(@portfolios) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
 
-<%= link_to 'Show', @portfolio %> |
-<%= link_to 'Back', portfolios_path %>
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
