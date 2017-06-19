@@ -31,7 +31,7 @@ puts "5 skills created"
     MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO
     MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO
     MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO MU MON DO",
-    main_image: "http://d39kbiy71leyho.cloudfront.net/wp-content/uploads/2016/05/09170020/cats-politics-TN.jpg",
+    main_image: "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
     thumb_image: "https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/cat-adult-landing-hero.ashx",
     )
 end
