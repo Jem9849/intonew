@@ -2,12 +2,10 @@
 
 <%= link_to "Create A NEWIE WOO", new_portfolio_url %>
 
-<% @portfolios.each do |portfolio| %>
-  <p><%= link_to portfolio.title, portfolio_show_path(portfolio) %></p>
-  <p><%= portfolio.subtitle %></p>
-  <p><%= portfolio.body %></p>
-  <%= image_tag portfolio.thumb_image unless portfolio.thumb_image.nil? %>
-  <%= link_to "Edit", edit_portfolio_path(portfolio) %>
-  <%= link_to "DELETE DIS PORTFELLIO ETEM *RAWR*", portfolio_path(portfolio), method: :delete, data: {
-    confirm: 'ARE YOU SUR?'} %>
+<%= render @portfolios %>
+
+<% if false %>
+ <%=render partial: 'portfolio_item', collection: @portfolio_items %>
+ Partial part must be the partial's name. This whole code is to make it so we can use 
+'portfolio_item' instead of just @portfolios.
 <% end %>
