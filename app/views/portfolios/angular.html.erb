@@ -1,13 +1,13 @@
 <h1>Angular Portfolio Items</h1>
 
-<%= link_to "Create A NEWIE WOO", new_portfolio_url %>
+<%= link_to "Create A NEWIE WOO", new_portfolio_url if logged_in?(:site_admin) %> 
 
 <% @angular_portfolio_items.each do |portfolio| %>
   <p><%= link_to portfolio.title, portfolio_show_path(portfolio) %></p>
   <p><%= portfolio.subtitle %></p>
   <p><%= portfolio.body %></p>
   <%= image_tag portfolio.thumb_image unless portfolio.thumb_image.nil? %>
-  <%= link_to "Edit", edit_portfolio_path(portfolio) %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio) if logged_in?(:site_admin) %>
   <%= link_to "DELETE DIS PORTFELLIO ETEM *RAWR*", portfolio_path(portfolio), method: :delete, data: {
-    confirm: 'ARE YOU SUR?'} %>
+    confirm: 'ARE YOU SUR?'}  if logged_in?(:site_admin) %>
 <% end %>
