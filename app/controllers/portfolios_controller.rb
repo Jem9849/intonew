@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio, only: [:edit, :update, :show, :destroy]
 layout "portfolio"
   def index
      @portfolios = Portfolio.all
@@ -26,12 +27,11 @@ layout "portfolio"
       end
     end
   end
+  
   def edit
-    @portfolios = Portfolio.find(params[:id])
   end
   
 def update
- @portfolios = Portfolio.find(params[:id])
  
  respond_to do |format|
   if @portfolios.update(portfolio_params)
@@ -43,12 +43,10 @@ def update
 end
 
 def show
-  @portfolios = Portfolio.find(params[:id])
 end
 
 def destroy
   #LOOOK FOR
-   @portfolios = Portfolio.find(params[:id])
    #DESTROY MUAHAHHAHA 
    @portfolios.destroy
    #GO BACK YOU SUCK OKAY?
@@ -64,4 +62,8 @@ end
                                       technologies_attributes: [:name])
   end
   
+end
+
+def set_portfolio
+  @portfolios = Portfolio.find(params[:id])
 end
