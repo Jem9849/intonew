@@ -16,4 +16,8 @@ module ApplicationHelper
    content_tag(:p, greet, class: "source_greet" )
   end 
  end
+
+  def copyright_generator
+   @copyright = JemViewTool::Renderer.copyright 'Jeremy Saysanasy', 'All rights reserved'
+  end
 end

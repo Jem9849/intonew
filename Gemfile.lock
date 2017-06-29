@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/Jem9849/jem_view_tool
+  revision: e04aeab5897c743e22478c679546b0c2393aa83e
+  specs:
+    jem_view_tool (0.1.0)
+
+GIT
   remote: https://github.com/twbs/bootstrap-rubygem
   revision: 7cdeca9a0e8db3bb7548d9fa5bdaad9b644fca32
   specs:
@@ -196,6 +202,7 @@ DEPENDENCIES
   devise (~> 4.3)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
+  jem_view_tool!
   jquery-rails
   listen (~> 3.0.5)
   pg (~> 0.18)
