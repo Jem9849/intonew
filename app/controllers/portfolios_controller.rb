@@ -5,7 +5,7 @@ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, 
 site_admin: :all
 
   def index
-     @portfolios = Portfolio.all
+     @portfolios = Portfolio.by_position
   end
   
    def angular
