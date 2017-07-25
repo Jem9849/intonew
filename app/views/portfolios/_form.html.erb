@@ -1,7 +1,7 @@
 <%= form_for(@portfolios) do |f| %>
   <% if @portfolios.errors.any? %>
     <% @portfolios.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: "MURK UR BIRDS", sticky: false) %>
+      <%= alert_gen error %>
     <% end %>
   <% end %>
   

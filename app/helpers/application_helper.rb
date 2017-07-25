@@ -61,3 +61,15 @@ module ApplicationHelper
    "active" if current_page? path
   end
 end
+
+  def alerts
+   alert = (flash[:alert] || flash[:error] || flash[:notice])
+   
+   if alert 
+     alert_gen alert
+   end
+  end
+  
+  def alert_gen msg
+   js add_gritter(msg, title: "MURK UR BIRDS", sticky: false) 
+  end

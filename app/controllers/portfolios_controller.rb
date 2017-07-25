@@ -45,7 +45,7 @@ def update
  
  respond_to do |format|
   if @portfolios.update(portfolio_params)
-    format.html { redirect_to portfolios_path, notice: 'IT WAS ALL UPDATED. NOW GO AWAY' }
+    format.html { redirect_to portfolios_path, notice: 'IT WAS ALL UPDATED. NOW GO AWAY.' }
  else
    format.html { render :edit }
   end
@@ -61,7 +61,7 @@ def destroy
    @portfolios.destroy
    #GO BACK YOU SUCK OKAY?
     respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'MUAHHAHA YOU DESTROYED IT' }
+      format.html { redirect_to portfolios_url, notice: 'MUAHHAHA YOU DESTROYED IT.' }
     end
 end
 
